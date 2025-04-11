@@ -37,7 +37,7 @@ while  currentIndex < noItems:
                 value = float(parts[1]) #treats as float
             except:
                 value = parts[1] ##treats as otherwise
-        itemList.append((key, value))  # Store (key, value) tuple
+        itemList.append((key, value))  # Store a tuple of (category, amount)
 
     else:
         print("Ensure you enter data using the correct format...\n (e.g orange 50) where 'orange' is the item and '50' is the cost")
@@ -91,7 +91,7 @@ display_category("entertainment", entertainment)
 display_category("books", books)
 
 #considering the unavailable items in our list
-display_category("Items we don't have in out category:", unavailableListItem)
+display_category("Items we don't have in our category:", unavailableListItem)
 
 print("\n\nFinished processing the details...")
 

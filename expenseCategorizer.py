@@ -29,7 +29,7 @@ while  currentIndex < noItems:
     parts = inputPair.split()
 
     if len(parts) == 2:
-        key = parts[0]
+        key = parts[0].lower()
         try:
             value = int(parts[1]) #treats as integer
         except ValueError:
@@ -66,51 +66,32 @@ for key, item in itemList:
 #displaying the result for the categoried expenses
 print("\nThe categorized expenses of the user include:")
 
-#considering the food  
-print("For Food:")
-if food:
- for foodItem, foodValues in food.items():
-        print(foodItem, foodValues)
-else:
-    print("No food was recieved...")
+def display_category(name, category_dict):
+    print(f"For {name.capitalize()}:")
+    if category_dict:
+        for item, values in category_dict.items():
+            print(item, values)
+    else:
+        print(f"No {name} items were recorded...")
 
-#considering the transportation
-print("For transportation:")    
-if transport:
-    for transportItem, transport in transport.items():
-        print(transportItem, transport)
-else:
-    print("No transportation Item was recorded...")
+
+#considering the food  
+display_category("food", food)
+
+#considering the transportation 
+display_category("transportation", transport)
 
 #considering the bills
-print("For bills:")   
-if bills:
-    for bill, bills in bills.items():
-        print(bill, bills)
-else:
-    print("No bills were recorded...")
+display_category("bills", bills)
 
-#considering the entertainment
-print("For entertainment:")   
-if entertainment:
-    for ent, entertainment in entertainment.items():
-        print(ent, entertainment)
-else:
-    print("No entertaiment Item was recorded...")
+#considering the entertainment   
+display_category("entertainment", entertainment)
 
 #considering the books  
-print("For books:") 
-if books:
-    for book, books in books.items():
-        print(book, books)
-else:
-    print("No books were recorded...")
+display_category("books", books)
 
 #considering the unavailable items in our list
-print("For Items we don't have in out category:") 
-if unavailableListItem:
-    for item, unavailableListItem in unavailableListItem.items():
-        print(item, unavailableListItem)
+display_category("Items we don't have in out category:", unavailableListItem)
 
 print("\n\nFinished processing the details...")
 

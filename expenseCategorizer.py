@@ -1,6 +1,10 @@
 # assuming these are the available list of items we can compare with
 # "food", "transport", "bills", "books", "entertainment"
-food ,entertainment, transport, bills, books = {}
+food  = {}
+entertainment = {} 
+transport = {}
+bills = {}
+books = {}
 
 
 # Get the number of items
@@ -57,6 +61,55 @@ for item in itemList:
         unavailableListItem[item] = itemList[item]
 
 
-print(food)
-print(books)
-print(unavailableListItem)
+#displaying the result for the categoried expenses
+print("\nThe categorized expenses of the user include:")
+while True:
+    #considering the food  
+    print("For Food:")
+    if len(food) > 0:
+        for foodItem in food:
+            print(foodItem, food[foodItem])
+    else:
+        print("No food was recieved...")
+  
+  #considering the transportation
+    print("For transportation:")    
+    if len(transport) > 0:
+        for transportItem in transport:
+            print(transportItem, transport[transportItem])
+    else:
+        print("No transportation Item was recorded...")
+ 
+ #considering the bills
+    print("For bills:")   
+    if len(bills) > 0:
+        for bill in bills:
+            print(bill, bills[bill])
+    else:
+        print("No bills were recorded...")
+    
+ #considering the entertainment
+    print("For entertainment:")   
+    if len(entertainment) > 0:
+        for ent in entertainment:
+            print(ent, entertainment[ent])
+    else:
+        print("No entertaiment Item was recorded...")
+    
+ #considering the books  
+    print("For books:") 
+    if len(books) > 0:
+        for book in books:
+            print(book, books[book])
+    else:
+        print("No books were recorded...")
+
+#considering the unavailable items in our list
+    print("For Items we don't have in out category:") 
+    if len(unavailableListItem) > 0:
+        for item in unavailableListItem:
+            print(item, unavailableListItem[item])
+
+    print("\n\nFinished processing the details...")
+    break
+    

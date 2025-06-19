@@ -8,7 +8,6 @@ transport = defaultdict(list)
 bills = defaultdict(list)
 books = defaultdict(list)
 
-
 # Get the number of items
 while True:
     noItems = input("Enter the number of items>> ")

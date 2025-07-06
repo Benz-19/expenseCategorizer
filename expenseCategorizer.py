@@ -93,4 +93,3 @@ display_category("books", books)
 display_category("Items we don't have in our category:", unavailableListItem)
 
 print("\n\nFinished processing the details...")
-
